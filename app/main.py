@@ -41,14 +41,14 @@ async def get_dynamics(
     start_date: Annotated[
         str,
         Query(
-            regex="^(0[1-9]|[12][0-9]|3[01])[.\-/](0[1-9]|1[0-2])[.\-/]\d{4}$",
+            pattern=r"^(0[1-9]|[12][0-9]|3[01])[.\-/](0[1-9]|1[0-2])[.\-/]\d{4}$",
             description='Enter date in the format:"dd.mm.yyyy"',
         ),
     ],
     end_date: Annotated[
         str,
         Query(
-            regex="^(0[1-9]|[12][0-9]|3[01])[.\-/](0[1-9]|1[0-2])[.\-/]\d{4}$",
+            pattern=r"^(0[1-9]|[12][0-9]|3[01])[.\-/](0[1-9]|1[0-2])[.\-/]\d{4}$",
             description='Enter date in the format:"dd.mm.yyyy"',
         ),
     ],
